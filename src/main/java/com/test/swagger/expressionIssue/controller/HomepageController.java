@@ -13,4 +13,12 @@ public class HomepageController {
 	public String homepage() {
 		return "<html><body>Home page .... <br/>Swagger URL: <a href='/swagger-ui.html'>Click here</a></body</html>";
 	}
+	
+	@ApiOperation(value="${splitChar} - The home page. ", 
+			notes="${splitChar} - Notes")
+	@GetMapping(value={"/test"})
+	public String testPage() {
+		return "<html><body>Home page .... <br/>Swagger URL: <a href='/swagger-ui.html'>Click here</a></body</html>";
+	}
+	
 }
